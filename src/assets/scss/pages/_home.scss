@@ -1,0 +1,115 @@
+.top {
+  h1 {
+    @include text-center;
+    padding: 30vh 0 5vh 0;
+    @include bp("mama-bear") {
+      font-size: 2.5em;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.we-help {
+  @include bp("mama-bear") {
+    font-size: 0.7em;
+  }
+  &__item {
+    @include flex-container;
+    @include bp("mama-bear") {
+      flex-direction: column;
+    }
+  }
+  &__box {
+    border: 2px solid white;
+    width: 35%;
+    margin: 10% 5% 2% 0;
+    padding: 3.5% 5% 5% 2.5%;
+    @include bp("mama-bear") {
+      width: 100%;
+      padding: 5%;
+      line-height: 1.8;
+      font-size: 1.25em;
+    }
+  }
+}
+
+.product {
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  @include bp("mama-bear") {
+    height: 40vh;
+  }
+  &__item {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+
+    &__flex {
+      @include flex-container;
+      img {
+        width: 2vw !important;
+        position: relative;
+        left: 2vw;
+        cursor: pointer;
+        @include bp("mama-bear") {
+          width: 5vw !important;
+        }
+      }
+    }
+  }
+}
+
+.univ {
+  background-image: url("../../images/Univ.png");
+  color: $black;
+  h1 {
+    @include itc-bold;
+  }
+}
+
+.serem {
+  background-image: url("../../images/Fix\ Serem.png");
+  color: white;
+  img {
+    width: 12%;
+    @include bp("mama-bear") {
+      width: 30%;
+    }
+  }
+}
+
+.talk {
+  h1 {
+    @include bp("mama-bear") {
+      font-size: 2.2em !important;
+    }
+  }
+  &__item {
+    @include flex-container;
+  }
+  &__box {
+    cursor: pointer;
+    display: flex;
+    border: 2px solid white;
+    width: 20%;
+    margin-top: 5vh;
+    padding: 1.5%;
+    img {
+      width: 2vw;
+      margin-left: 4vw;
+    }
+
+    @include bp("mama-bear") {
+      width: 40%;
+      img {
+        width: 6vw;
+        margin-left: 8vw;
+      }
+    }
+
+  }
+}

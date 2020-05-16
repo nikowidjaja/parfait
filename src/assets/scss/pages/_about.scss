@@ -1,0 +1,20 @@
+.about {
+  &__top {
+    font-size: 1.2rem;
+    padding: 30vh 0 5vh 5vw;
+    @include bp("mama-bear"){
+      padding-top:15vh;
+      font-size: 0.8rem;
+    }
+    p{
+        width: 70%;
+        @include bp("mama-bear"){
+         width: 90%;
+         line-height: 1.8;
+         padding-top:2vh;
+         font-size: 1.4em;
+        }
+        padding-bottom: 10vh;
+    }
+  }
+}

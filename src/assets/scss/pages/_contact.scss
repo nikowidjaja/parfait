@@ -1,0 +1,69 @@
+.contact {
+  margin-top: 40vh;
+  margin-left: 5vw;
+  @include bp("mama-bear") {
+    margin-top: 15vh;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  input {
+    @include itc-medium;
+    display: block;
+    padding: 2%;
+    border: 2px solid black;
+    margin: 2.5% 0;
+    width: 60%;
+    font-size: 1.2em;
+    @include bp("mama-bear"){
+     width: 90%;
+     margin:5% 0;
+     padding:3.5%;
+    }
+  }
+
+  input[type="submit"] {
+    background: none;
+    text-align: left;
+    width: 100%;
+    border: none;
+  }
+}
+
+.contact-flex {
+  @include flex-container;
+  margin-top: 10vh;
+  @include bp("mama-bear") {
+    flex-direction: column;
+  }
+  &__item {
+    width: 50%;
+    @include bp("mama-bear") {
+      width: 100%;
+      padding-bottom: 5vh;
+    }
+    h3 {
+      color: black;
+    }
+  }
+
+  .gray {
+    color: gray !important;
+  }
+}
+
+.submit-btn {
+  position: relative;
+  width: 35%;
+  padding: 1%;
+  border: 2px solid black;
+  cursor: pointer;
+  
+  img {
+    width: 10%;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

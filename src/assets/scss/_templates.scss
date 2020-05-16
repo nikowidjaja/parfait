@@ -1,0 +1,49 @@
+$black: #171717;
+$white: #ffffff;
+$gray: #c3c3c3;
+
+@mixin bp($point) {
+  $bp-babybear: "(max-width: 600px)";
+  $bp-mamabear: "(max-width: 900px)";
+
+  @if $point == mama-bear {
+    @media #{$bp-mamabear} {
+      @content;
+    }
+  } @else if $point == baby-bear {
+    @media #{$bp-babybear} {
+      @content;
+    }
+  }
+}
+
+@font-face {
+  font-family: itc-bold;
+  src: url("../fonts/ITC Avant Garde Gothic Bold/ITC Avant Garde Gothic Bold.otf");
+}
+
+@font-face {
+  font-family: itc-medium;
+  src: url("../fonts/ITC Avant Garde Gothic Medium/ITC Avant Garde Gothic Medium.otf");
+}
+
+@mixin itc-bold {
+    font-family: itc-bold,sans-serif;
+}
+
+@mixin itc-medium {
+    font-family: itc-medium,sans-serif;
+}
+
+@mixin text-center {
+    text-align: center;
+}
+
+@mixin flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-container {
+    display: flex;
+}

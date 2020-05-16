@@ -1,0 +1,53 @@
+.work {
+  margin-top: 40vh;
+  @include bp("mama-bear"){
+    margin-top:25vh;
+  }
+  > h2 {
+    margin-left: 5vw;
+  }
+}
+
+.work-flex {
+  @include flex-container;
+  flex-wrap: wrap;
+  margin-top: 20vh;
+  @include bp("mama-bear"){
+    margin-top:5vh;
+  }
+  &__item {
+    width: 50%;
+    position: relative;
+    @include bp("mama-bear"){
+      width: 100%;
+    }
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__description {
+    img:first-child {
+      position: absolute;
+      left: 5%;
+      bottom: 10%;
+      width: 20%;
+    }
+    img:nth-child(2n) {
+      position: absolute;
+      right: 5%;
+      bottom: 10%;
+      width: 3.5%;
+      @include bp("mama-bear"){
+        width: 10%;
+      }
+    }
+  }
+
+  .bigger {
+    img:first-child {
+      width: 50%;
+    }
+  }
+}

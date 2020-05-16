@@ -1,0 +1,15 @@
+.footer {
+  @include flex-container;
+  align-items: center;
+  min-height: 12vh;
+  margin-left: 5vw;
+  position: relative;
+  &__image {
+    @include flex-container;
+    position: absolute;
+    right: 5%;
+    img {
+      margin-left: 2vw;
+    }
+  }
+}

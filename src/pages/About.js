@@ -21,7 +21,7 @@ export default class About extends Component {
                         <h1>Let's talk about you</h1>
                         <div onClick={()=>{window.location.href="/contact"}} className="talk__box">
                             <p>Contact</p>
-                            <img src={require("../assets/images/White Arrow.svg")} alt="Arrow" />
+                            <img src={require("../assets/images/White Arrow.png")} alt="Arrow" />
                         </div>
                     </div>
                     <Footer />

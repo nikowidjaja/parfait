@@ -12,13 +12,13 @@ export default class Contact extends Component {
                     <div className="contact-flex">
                         <div className="contact-flex__item">
                             <h3>Business Form</h3>
-                            <form>
-                                <input placeholder="Name" type="text" />
-                                <input placeholder="Email" type="email" />
-                                <input placeholder="Phone Number" type="tel" />
+                            <form action="mailto:alpharex123@gmail.com">
+                                <input name="name" placeholder="Name" type="text" />
+                                <input name="email" placeholder="Email" type="email" />
+                                <input name="phone" placeholder="Phone Number" type="tel" />
                                 <div className="submit-btn">
                                     <input type="submit" />
-                                    <img src={require("../assets/images/Black Arrow.svg")} alt="/" />
+                                    <img src={require("../assets/images/Black Arrow.png")} alt="/" />
                                 </div>
                             </form>
                         </div>
@@ -27,7 +27,6 @@ export default class Contact extends Component {
                             <p>parfaitstudio@gmail.com</p>
                             <p>+6282243947242</p>
                             <p>Jakarta, Indonesia</p>
-
                         </div>
                     </div>
                 </div>

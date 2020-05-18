@@ -51,7 +51,7 @@
     &__flex {
       @include flex-container;
       img {
-        width: 2vw !important;
+        width: 3vw !important;
         position: relative;
         left: 2vw;
         cursor: pointer;
@@ -99,7 +99,7 @@
     margin-top: 5vh;
     padding: 1.5%;
     img {
-      width: 2vw;
+      width: 3vw;
       margin-left: 4vw;
     }
 

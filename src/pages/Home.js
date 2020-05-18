@@ -32,7 +32,7 @@ export default class Home extends Component {
                         <img src={require("../assets/images/Univ Logo.svg")} alt="Arrow" />
                         <div className="product__item__flex">
                             <p>Online mentor booking</p>
-                            <img src={require("../assets/images/Black Arrow.svg")} alt="Arrow" />
+                            <img src={require("../assets/images/Black Arrow.png")} alt="Arrow" />
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ export default class Home extends Component {
                         <img src={require("../assets/images/Fix Serem Logo.png")} alt="Arrow" />
                         <div className="product__item__flex">
                             <p>Horror story sharing</p>
-                            <img src={require("../assets/images/White Arrow.svg")} alt="Arrow" />
+                            <img src={require("../assets/images/White Arrow.png")} alt="Arrow" />
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ export default class Home extends Component {
                     <h1>Let's talk about you</h1>
                     <div onClick={()=>{window.location.href="/contact"}} className="talk__box">
                         <p>Contact</p>
-                        <img src={require("../assets/images/White Arrow.svg")} alt="Arrow" />
+                        <img src={require("../assets/images/White Arrow.png")} alt="Arrow" />
                     </div>
                 </div>
                 <Footer />

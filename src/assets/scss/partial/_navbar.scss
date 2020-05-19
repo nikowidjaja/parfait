@@ -1,12 +1,11 @@
 .navbar {
   @include flex-container;
-
   position: fixed;
   top: 10%;
   width: 100%;
   z-index: 2;
   transition: top 0.2s;
-
+  filter: none;
   @include bp("mama-bear") {
     top: 3%;
   }

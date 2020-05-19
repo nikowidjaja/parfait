@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import disableScroll from 'disable-scroll';
 
 export default class Navbar extends Component {
 
@@ -14,28 +15,40 @@ export default class Navbar extends Component {
             navOpen: !this.state.navOpen,
             firstTime: false
         })
+
     }
     render() {
 
+        let currentScrollPos;
+        
         //SCROLL FUNCTION
-        if (this.state.navOpen === false) {
-            console.log("closed");
-
-            let prevScrollpos = window.pageYOffset;
-
-            window.onscroll = function () {
-                var currentScrollPos = window.pageYOffset;
-                let mq = window.matchMedia("(max-width: 700px)").matches;
-                if (prevScrollpos > currentScrollPos) {
-                    mq ? document.querySelector(".navbar").style.top = "3%" : document.querySelector(".navbar").style.top = "10%";
-                } else {
-                    document.querySelector(".navbar").style.top = "-100px";
-                }
-                prevScrollpos = currentScrollPos;
-            }
+        let prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            currentScrollPos = window.pageYOffset;
+        console.log(currentScrollPos);//800
+        if(currentScrollPos>1230&&currentScrollPos<2100){
+            document.querySelector(".navbar").style.filter="invert(1)";
+        }
+        else{
+            document.querySelector(".navbar").style.filter="invert(0)";
         }
 
+            let mq = window.matchMedia("(max-width: 700px)").matches;
+            if (prevScrollpos > currentScrollPos) {
+                mq ? document.querySelector(".navbar").style.top = "3%" : document.querySelector(".navbar").style.top = "10%";
+            } else {
+                document.querySelector(".navbar").style.top = "-100px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
         //END OF SCROLL FUNCTION
+
+        if (this.state.navOpen) {
+            disableScroll.on();
+        }
+        else {
+            disableScroll.off();
+        }
 
         return (
             <React.Fragment>
